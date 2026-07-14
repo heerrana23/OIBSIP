@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio of Heer Rana - B.Tech Computer Science & Engineering Student, Frontend Developer, and UI/UX Designer.">
+    <title>Heer Rana | Premium Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header class="navbar">
+        <a href="#" class="logo">HR<span>.</span></a>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Welcome to my portfolio</span>
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Heer Rana</span></h1>
+                <h2 class="hero-subtitle">Designing Beautiful Experiences, One Pixel at a Time.</h2>
+                <p class="hero-desc">I am a passionate Computer Science & Engineering student who loves creating beautiful, responsive websites and designing user-friendly digital experiences. I enjoy transforming ideas into modern and meaningful interfaces through Web Development and UI/UX Design.</p>
+                <div class="hero-buttons">
+                    <a href="resume.pdf" download class="btn btn-primary"><i class="fa-solid fa-download"></i> Download Resume</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="avatar-frame">
+                    <img src="avatar.png" alt="Heer Rana" class="avatar-image">
+                        <defs>
+                            <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#023859" />
+                                <stop offset="100%" stop-color="#54ACBF" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="95" fill="url(#avatarGrad)" opacity="0.2" stroke="#26658C" stroke-width="2"/>
+                        <path d="M60,110 Q40,60 100,50 Q160,60 140,110 Z" fill="#011C40"/>
+                        <path d="M65,90 Q65,140 100,140 Q135,140 135,90 Z" fill="#A7EBF2" opacity="0.9"/>
+                        <path d="M60,85 Q100,45 140,85 Q100,60 60,85 Z" fill="#011C40"/>
+                        <rect x="70" y="85" width="25" height="18" rx="5" fill="none" stroke="#26658C" stroke-width="4"/>
+                        <rect x="105" y="85" width="25" height="18" rx="5" fill="none" stroke="#26658C" stroke-width="4"/>
+                        <line x1="95" y1="94" x2="105" y2="94" stroke="#26658C" stroke-width="4"/>
+                        <path d="M60,140 Q100,130 140,140 L150,190 L50,190 Z" fill="#023859"/>
+                        <path d="M85,140 L100,160 L115,140 Z" fill="#A7EBF2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="glass-card about-card">
+                <p>I'm a B.Tech Computer Science & Engineering student with a strong passion for Web Development and UI/UX Design. I enjoy creating responsive, visually appealing, and user-friendly websites while continuously learning new technologies. I love solving design problems, improving user experiences, and building interfaces that combine creativity with functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills section-padding" id="skills">
+        <div class="container">
+            <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-card"><h3>HTML5</h3></div>
+                <div class="glass-card skill-card"><h3>CSS3</h3></div>
+                <div class="glass-card skill-card"><h3>Python</h3></div>
+                <div class="glass-card skill-card"><h3>C Programming</h3></div>
+                <div class="glass-card skill-card"><h3>Figma</h3></div>
+                <div class="glass-card skill-card"><h3>Canva</h3></div>
+                <div class="glass-card skill-card"><h3>UI/UX Design</h3></div>
+                <div class="glass-card skill-card"><h3>Git & GitHub</h3></div>
+                <div class="glass-card skill-card"><h3>Responsive Design</h3></div>
+                <div class="glass-card skill-card"><h3>Basic MS Excel</h3></div>
+                <div class="glass-card skill-card"><h3>MS PowerPoint</h3></div>
+                <div class="glass-card skill-card"><h3>Documentation</h3></div>
+                <div class="glass-card skill-card"><h3>Data Entry</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects section-padding" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="glass-card project-card">
+                    <div class="project-info">
+                        <span class="project-tags">Figma • UI/UX Design</span>
+                        <h3>Figma UI/UX Design Collection</h3>
+                        <p>Designed modern, responsive and user-friendly UI/UX interfaces using Figma with a focus on clean layouts, visual hierarchy, accessibility, and user experience.</p>
+                        <a href="https://www.figma.com/proto/uRiAUo5UqkhhuEqJialXGP?node-id=0-1&t=KkQviCz8AHpQqi09-6" target="_blank" class="btn btn-secondary project-btn">View Design <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="glass-card project-card">
+                    <div class="project-info">
+                        <span class="project-tags">HTML5 • CSS3</span>
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Developed a modern, responsive portfolio website using HTML5 and CSS3. The website showcases my skills, projects, education, and achievements through a clean, elegant interface.</p>
+                        <a href="https://github.com/heerrana23" target="_blank" class="btn btn-secondary project-btn">View GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="glass-card project-card">
+                    <div class="project-info">
+                        <span class="project-tags">HTML5 • CSS3</span>
+                        <h3>Travel Agency Landing Page</h3>
+                        <p>Designed a visually attractive travel agency landing page featuring modern layouts, responsive design, engaging sections, and elegant UI components using HTML5 and CSS3.</p>
+                        <a href="https://github.com/heerrana23/OIBSIP/tree/2bff51c739aa4956d1f593238a5577e4fd20128e/WebDev-L1-LandingPage" target="_blank" class="btn btn-secondary project-btn">View GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education section-padding" id="education">
+        <div class="container">
+            <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <span class="timeline-date">2025 – 2029</span>
+                        <h3>Bachelor of Technology</h3>
+                        <h4>Computer Science & Engineering</h4>
+                        <p class="university">P P Savani University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="exp-cert section-padding">
+        <div class="container two-column-grid">
+            <div>
+                <h2 class="section-title">Activities & <span class="gradient-text">Exp</span></h2>
+                <div class="activities-list">
+                    <div class="glass-card activity-card">
+                        <i class="fa-solid fa-laptop-code activity-icon"></i>
+                        <p>Participated in Learn in Hacks Hackathon</p>
+                    </div>
+                    <div class="glass-card activity-card">
+                        <i class="fa-solid fa-bezier-curve activity-icon"></i>
+                        <p>Designed UI/UX Projects using Figma</p>
+                    </div>
+                    <div class="glass-card activity-card">
+                        <i class="fa-solid fa-palette activity-icon"></i>
+                        <p>Created Posters & Presentations using Canva</p>
+                    </div>
+                    <div class="glass-card activity-card">
+                        <i class="fa-solid fa-code activity-icon"></i>
+                        <p>Learning Frontend Web Development</p>
+                    </div>
+                    <div class="glass-card activity-card">
+                        <i class="fa-solid fa-cloud activity-icon"></i>
+                        <p>Continuously exploring Cloud Computing and modern technologies</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
+                <div class="certificates-grid">
+                    <div class="glass-card cert-card">
+                        <h3>AWS Cloud Computing Learning</h3>
+                        <a href="https://www.linkedin.com/posts/heer-rana-264956386_aws-cloudcomputing-learning-share-7452358941461762050-hY6h/" target="_blank" class="btn btn-secondary cert-btn">View Certificate</a>
+                    </div>
+                    <div class="glass-card cert-card">
+                        <h3>Learn in Hacks Hackathon</h3>
+                        <a href="https://www.linkedin.com/posts/heer-rana-264956386_hackathon-techlearning-growth-share-7452357095464615937-Bi-V/" target="_blank" class="btn btn-secondary cert-btn">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <div class="contact-wrapper">
+                <div class="glass-card contact-card">
+                    <div class="contact-item">
+                        <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:ranaheer2327@gmail.com">ranaheer2327@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918200456920">8200456920</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bharuch, Gujarat, India</p>
+                        </div>
+                    </div>
+
+                    <hr class="contact-divider">
+
+                    <div class="social-links">
+                        <a href="https://github.com/heerrana23" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/heer-rana-264956386" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/heer_rana23" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Heer Rana. All Rights Reserved.</p>
+        <p class="credits">Designed & Developed with ❤️ using HTML5 & CSS3</p>
+    </footer>
+
+</body>
+</html>
