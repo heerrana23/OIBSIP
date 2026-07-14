@@ -1,0 +1,366 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-grad: linear-gradient(135deg, #2563eb, #3b82f6);
+    --bg-grad: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 50%, #eff6ff 100%);
+    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-border: rgba(255, 255, 255, 0.4);
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --error-red: #ef4444;
+    --error-bg: rgba(239, 68, 68, 0.1);
+    --success-green: #10b981;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-grad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.converter-container {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ==========================================================================
+   2. PREMIUM GLASS CARD
+   ========================================================================== */
+.converter-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    width: 100%;
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+.live-thermometer {
+    font-size: 28px;
+    color: #2563eb;
+    transition: transform 0.3s ease;
+}
+
+.card-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.gradient-text {
+    background: var(--primary-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-header p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   3. FORM INPUTS & DROP-DOWN FLEX LAYOUT
+   ========================================================================== */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.dropdown-flex-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.swap-btn-wrapper {
+    margin-top: 12px;
+}
+
+#swap-units-btn {
+    background: white;
+    border: 1.5px solid rgba(203, 213, 225, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+#swap-units-btn:hover {
+    transform: rotate(180deg);
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.input-wrapper, .select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1.5px solid rgba(203, 213, 225, 0.8);
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    background: white;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 35px;
+}
+
+.select-wrapper select:focus {
+    border-color: #2563eb;
+    background: white;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.select-wrapper select:focus + .select-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* ==========================================================================
+   4. ERROR MESSAGES
+   ========================================================================== */
+.error-msg {
+    margin-top: 8px;
+    background: var(--error-bg);
+    color: var(--error-red);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-left: 3px solid var(--error-red);
+    animation: slideIn 0.3s ease forwards;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--primary-grad);
+    color: white;
+    flex: 2;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(226, 232, 240, 0.8);
+    color: #475569;
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background: rgba(203, 213, 225, 0.9);
+}
+
+/* ==========================================================================
+   6. SINGLE TARGET RESULT CARD
+   ========================================================================== */
+.results-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px dashed rgba(203, 213, 225, 0.8);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.success-badge {
+    color: var(--success-green);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.single-result {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    border-left: 5px solid #2563eb;
+}
+
+.card-unit {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.card-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* ==========================================================================
+   7. FOOTER & ANIMATIONS
+   ========================================================================== */
+.main-footer {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.main-footer span {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.heart-icon {
+    color: var(--error-red);
+    animation: heartbeat 1.2s infinite ease-in-out;
+    display: inline-block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    40% { transform: scale(1.25); }
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 480px) {
+    .converter-card {
+        padding: 25px 20px;
+    }
+    .dropdown-flex-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    .flex-child {
+        width: 100%;
+    }
+    .swap-btn-wrapper {
+        margin: 5px 0 15px 0;
+        transform: rotate(90deg);
+    }
+    .btn-group {
+        flex-direction: column;
+    }
+}

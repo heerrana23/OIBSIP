@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="converter-container">
+        <main class="converter-card">
+            <header class="card-header">
+                <div class="icon-wrapper">
+                    <i class="fas fa-thermometer-half live-thermometer"></i>
+                </div>
+                <h1>TempCal<span class="gradient-text">Pro</span></h1>
+                <p>Convert precisely to your target unit</p>
+            </header>
+
+            <form id="converter-form" onsubmit="return false;">
+                <div class="input-group">
+                    <label for="temp-input">Enter Temperature</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="temp-input" step="any" placeholder="e.g., 25" required>
+                    </div>
+                    <div id="error-msg" class="error-msg hidden">
+                        <i class="fas fa-exclamation-circle"></i> <span id="error-text"></span>
+                    </div>
+                </div>
+
+                <div class="dropdown-flex-group">
+                    <div class="input-group flex-child">
+                        <label for="from-unit">From</label>
+                        <div class="select-wrapper">
+                            <select id="from-unit">
+                                <option value="C" selected>Celsius (°C)</option>
+                                <option value="F">Fahrenheit (°F)</option>
+                                <option value="K">Kelvin (K)</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+
+                    <div class="swap-btn-wrapper">
+                        <button type="button" id="swap-units-btn" title="Swap Units">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+
+                    <div class="input-group flex-child">
+                        <label for="to-unit">To</label>
+                        <div class="select-wrapper">
+                            <select id="to-unit">
+                                <option value="C">Celsius (°C)</option>
+                                <option value="F" selected>Fahrenheit (°F)</option>
+                                <option value="K">Kelvin (K)</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" id="convert-btn" class="btn btn-primary">
+                        <span class="btn-text">Convert</span>
+                        <span class="loader hidden"><i class="fas fa-circle-notch fa-spin"></i></span>
+                    </button>
+                    <button type="button" id="reset-btn" class="btn btn-secondary">
+                        <i class="fas fa-redo-alt"></i> Reset
+                    </button>
+                </div>
+            </form>
+
+            <section id="results-section" class="results-section hidden">
+                <div class="success-badge">
+                    <i class="fas fa-check-circle"></i> Converted Successfully
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card single-result">
+                        <div class="card-unit" id="target-unit-label">Result</div>
+                        <div class="card-value" id="final-result-value">--</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>Made with <i class="fas fa-heart heart-icon"></i> by <span>Heer Rana</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
